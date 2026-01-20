@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debutante Luísa</title>
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #b3e5fc; /* azul bebê */
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        .convite {
+            background-color: #ffffff;
+            padding: 30px 25px;
+            max-width: 400px;
+            width: 90%;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #9c27b0; /* lilás */
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 22px;
+            color: #7b1fa2; /* lilás escuro */
+            margin-top: 25px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #444;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #f3e5f5; /* lilás claro */
+            margin: 8px 0;
+            padding: 10px;
+            border-radius: 12px;
+            font-size: 18px;
+        }
+
+        a {
+            color: #6a1b9a; /* lilás */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .qrcode {
+            width: 250px;
+            margin-top: 15px;
+            border-radius: 12px;
+        }
+
+        .btn-pix {
+  margin-top: 15px;
+  padding: 12px 20px;
+  background-color: #9c27b0;
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-pix:hover {
+  background-color: #7b1fa2;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="convite">
+
+        <h1>🎉 Debutante Luísa</h1>
+        <p>Lista de presentes sugeridos:</p>
+
+        <ul>
+            <li><strong>Body Splash</strong></li>
+            <li><strong>Maquiagem</strong></li>
+            <li><strong>ROUPAS: Calça Nº36, Blusa P/M ou Calçado Nº 37/38</strong></li>
+        </ul>
+
+        <h2>💸 PIX</h2>
+
+        <img src="qrcodepix.jpeg" alt="QR Code PIX" class="qrcode">
+
+        <button class="btn-pix" onclick="copiarPix()">
+            📋 Copiar chave PIX
+        </button>
+
+        <p id="msg-pix" style="display:none; color:#7b1fa2; margin-top:10px;">
+            ✅ Chave PIX copiada!
+        </p>
+
+
+        <h2>🛒 Sites opcionais para compras</h2>
+        <ul>
+            <li><a href="https://s.shopee.com.br/6VHjmWGCho" target="_blank">Shopee</a></li>
+            <li><a href="https://mercadolivre.com/sec/2MsdSAP" target="_blank">Mercado Livre</a></li>
+            <li><a href="https://onelink.shein.com/26/5dul4fbokyki" target="_blank">Shein</a></li>
+            <li><a href="https://www.cea.com.br" target="_blank">C&A</a></li>
+            <li><a href="https://lojasrenner.com.br" target="_blank">Renner</a></li>
+            <li><a href="https://www.riachuelo.com.br" target="_blank">Riachuelo</a></li>
+        </ul>
+
+    </div>
+
+    <script>
+  function copiarPix() {
+    const chavePix = "00020101021126330014br.gov.bcb.pix0111481187528105204000053039865802BR5924LUISA BEATRIZ DOS SANTOS6009SAO PAULO622905251KFC7M26A4DCMP0PC8567GZRR6304ABD7";
+
+    navigator.clipboard.writeText(chavePix).then(() => {
+      document.getElementById("msg-pix").style.display = "block";
+    });
+  }
+    </script>
+
+
+</body>
+</html>
